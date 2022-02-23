@@ -16,12 +16,12 @@ load_dotenv(dotenv_path=env_path)
 
 SLACK_SIGNING_SECRET=os.environ['SLACK_SIGNING_SECRET']
 SLACK_BOT_TOKEN=os.environ['SLACK_BOT_TOKEN']
+SLACK_EVENT_REQUEST_URL=os.environ['SLACK_EVENT_REQUEST_URL']
 TELEGRAM_BOT_TOKEN=os.environ['TELEGRAM_BOT_TOKEN']
 TELEGRAM_BOT_CHAT_ID=os.environ['TELEGRAM_BOT_CHAT_ID']
 TELEGRAM_BRIDGE_GROUP_ID=os.environ['TELEGRAM_BRIDGE_GROUP_ID']
 
-slack_event_adapter = SlackEventAdapter(SLACK_SIGNING_SECRET,'/bridge',app)
-
+slack_event_adapter = SlackEventAdapter(SLACK_SIGNING_SECRET,SLACK_EVENT_REQUEST_URL,app)
 SLclient = slack_sdk.WebClient(token=SLACK_BOT_TOKEN)
 BOT_ID = SLclient.api_call('auth.test')['user_id']
  
