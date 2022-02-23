@@ -20,7 +20,7 @@ TELEGRAM_BOT_TOKEN=os.environ['TELEGRAM_BOT_TOKEN']
 TELEGRAM_BOT_CHAT_ID=os.environ['TELEGRAM_BOT_CHAT_ID']
 TELEGRAM_BRIDGE_GROUP_ID=os.environ['TELEGRAM_BRIDGE_GROUP_ID']
 
-slack_event_adapter = SlackEventAdapter(SLACK_SIGNING_SECRET,'/slack/events',app)
+slack_event_adapter = SlackEventAdapter(SLACK_SIGNING_SECRET,'/bridge',app)
 
 SLclient = slack_sdk.WebClient(token=SLACK_BOT_TOKEN)
 BOT_ID = SLclient.api_call('auth.test')['user_id']
