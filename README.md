@@ -2,7 +2,7 @@
 
 A bridge between slack and telegram channels.
 
-Telegram invite -> [Invite link](https://t.me/+ok3ICM8DrP5mYTY1)
+<!-- Telegram invite -> [Invite link](https://t.me/+ok3ICM8DrP5mYTY1) -->
 
 ## Tech Stack
 
